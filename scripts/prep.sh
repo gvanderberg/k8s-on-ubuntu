@@ -32,3 +32,4 @@ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.l
 
 apt-get update
 apt-get install -y kubeadm kubelet kubectl
+apt-mark hold kubelet kubeadm kubectl
