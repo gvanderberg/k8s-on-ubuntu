@@ -2,6 +2,7 @@
 apt-get update
 
 echo 1\) Install Docker
+echo
 
 apt-get install -y docker.io
 cat <<EOF >/etc/docker/daemon.json
@@ -14,10 +15,12 @@ systemctl enable docker
 usermod support -aG docker
 
 echo 2\) Disable Swap
+echo
 
 swapoff -a
 
 echo 3\) Install kubeadm kubelet kubectl
+echo
 
 apt-get install -y apt-transport-https
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
