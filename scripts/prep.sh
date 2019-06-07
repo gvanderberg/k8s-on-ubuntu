@@ -8,7 +8,8 @@ echo
 apt-get install -y docker.io
 cat <<EOF >/etc/docker/daemon.json
 {
-    "bip": "10.0.60.1/24"
+    "bip": "10.0.60.1/24",
+    "exec-opts": ["native.cgroupdriver=systemd"]
 }
 EOF
 systemctl start docker
