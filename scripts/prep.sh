@@ -1,6 +1,7 @@
 #!/bin/bash
 apt-get update
 
+echo
 echo 1\) Install Docker
 echo
 
@@ -14,11 +15,13 @@ systemctl start docker
 systemctl enable docker
 usermod support -aG docker
 
+echo
 echo 2\) Disable Swap
 echo
 
 swapoff -a
 
+echo
 echo 3\) Install kubeadm kubelet kubectl
 echo
 
