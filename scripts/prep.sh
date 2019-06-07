@@ -29,7 +29,7 @@ echo
 apt-get install -y apt-transport-https
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 6A030B21BA07F4FB
 
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+#curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
 
 apt-get update
