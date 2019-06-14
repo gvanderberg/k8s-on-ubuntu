@@ -14,7 +14,7 @@ cat <<EOF >/etc/docker/daemon.json
 EOF
 systemctl restart docker
 systemctl enable docker
-usermod support -aG docker
+usermod $USER -aG docker
 
 echo
 echo 2\) Disable Swap
