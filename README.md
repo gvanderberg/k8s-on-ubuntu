@@ -54,7 +54,7 @@ After the `init` is complete run the snippet given to you on the command-line:
 Your join token is valid for 24 hours, so save it into a text file. Here's an example of mine:
 
 ```
-$ kubeadm join --token 9e700f.7dc97f5e3a45c9e5 192.168.0.27:6443 --discovery-token-ca-cert-hash sha256:95cbb9ee5536aa61ec0239d6edd8598af68758308d0a0425848ae1af28859bea
+kubeadm join 192.168.8.200:6443 --token 3v79m8.46maklc1c2cm482e --discovery-token-ca-cert-hash sha256:39b856500561822203814dcab3a7c6fcac08e3a1816454006212d9af03007f7b
 ```
 
 * [Customize the docker0 bridge](https://docs.docker.com/v17.09/engine/userguide/networking/default_network/custom-docker0/)
