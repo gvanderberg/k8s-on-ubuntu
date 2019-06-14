@@ -32,7 +32,7 @@ sudo kubeadm config images pull -v3
 * Initialize your master node with a Pod network CIDR:
 
 ```
-sudo kubeadm init --token-ttl=0 --pod-network-cidr=10.244.0.0/16
+sudo kubeadm init --token-ttl=0 --pod-network-cidr=10.244.0.0/24
 ```
 
 We pass in `--token-ttl=0` so that the token never expires - do not use this setting in production. The UX for `kubeadm` means it's currently very hard to get a join token later on after the initial token has expired. 
