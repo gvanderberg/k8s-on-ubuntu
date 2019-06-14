@@ -16,6 +16,37 @@ Comment out swap partition
 #
 ```
 
+### Initialize your master node
+
+* kubeadm - used to create new clusters or join an existing one
+* kubectl - the CLI administration tool for Kubernetes
+ 
+* Pre-pull images
+
+`kubeadm` now has a command to pre-pull the requisites Docker images needed to run a Kubernetes master, type in:
+
+```
+sudo kubeadm config images pull -v3
+```
+
+* Initialize your master node with a Pod network CIDR:
+
+```
+sudo kubeadm init --token-ttl=0 --pod-network-cidr=10.244.0.0/16
+```
+
+We pass in `--token-ttl=0` so that the token never expires - do not use this setting in production. The UX for `kubeadm` means it's currently very hard to get a join token later on after the initial token has expired. 
+
+> Optionally also pass `--apiserver-advertise-address=192.168.0.27` with the IP of the Pi as found by typing `ifconfig`.
+
+After the `init` is complete run the snippet given to you on the command-line:
+
+```
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
 * [Customize the docker0 bridge](https://docs.docker.com/v17.09/engine/userguide/networking/default_network/custom-docker0/)
 * [Setting Up a Kubernetes Cluster on Ubuntu 18.04](https://mherman.org/blog/setting-up-a-kubernetes-cluster-on-ubuntu/)
 * [How to Install and Configure Kubernetes and Docker on Ubuntu 18.04 LTS](https://www.howtoforge.com/tutorial/how-to-install-kubernetes-on-ubuntu/)
