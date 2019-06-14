@@ -47,6 +47,14 @@ After the `init` is complete run the snippet given to you on the command-line:
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
+* Now save your join-token
+
+Your join token is valid for 24 hours, so save it into a text file. Here's an example of mine:
+
+```
+$ kubeadm join --token 9e700f.7dc97f5e3a45c9e5 192.168.0.27:6443 --discovery-token-ca-cert-hash sha256:95cbb9ee5536aa61ec0239d6edd8598af68758308d0a0425848ae1af28859bea
+```
+
 * [Customize the docker0 bridge](https://docs.docker.com/v17.09/engine/userguide/networking/default_network/custom-docker0/)
 * [Setting Up a Kubernetes Cluster on Ubuntu 18.04](https://mherman.org/blog/setting-up-a-kubernetes-cluster-on-ubuntu/)
 * [How to Install and Configure Kubernetes and Docker on Ubuntu 18.04 LTS](https://www.howtoforge.com/tutorial/how-to-install-kubernetes-on-ubuntu/)
