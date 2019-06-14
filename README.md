@@ -39,7 +39,7 @@ sudo kubeadm init --token-ttl=0 --pod-network-cidr=10.244.0.0/24
 
 We pass in `--token-ttl=0` so that the token never expires - do not use this setting in production. The UX for `kubeadm` means it's currently very hard to get a join token later on after the initial token has expired. 
 
-> Optionally also pass `--apiserver-advertise-address=192.168.0.27` with the IP of the Pi as found by typing `ifconfig`.
+> Optionally also pass `--apiserver-advertise-address=192.168.8.200` with the IP of the Pi as found by typing `ifconfig`.
 
 After the `init` is complete run the snippet given to you on the command-line:
 
