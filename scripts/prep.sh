@@ -40,4 +40,4 @@ echo
 
 sudo cp /boot/firmware/cmdline.txt /boot/firmware/cmdline_backup.txt
 orig="$(head -n1 /boot/firmware/cmdline.txt) cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory"
-echo $orig | sudo tee /boot/cmdline.txt
+echo $orig | sudo tee /boot/firmware/cmdline.txt
