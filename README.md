@@ -50,7 +50,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 Your join token is valid for 24 hours, so save it into a text file. Here's an example of mine:
 
 ```
-kubeadm join 192.168.8.200:6443 --token fr4eq0.5xys4i4rft5p95jd --discovery-token-ca-cert-hash sha256:4bd8f69e17af5643c5a1513ba8c74dbaa4dad1b40d7c63926424f6e647109574
+sudo kubeadm join 192.168.8.200:6443 --token fr4eq0.5xys4i4rft5p95jd --discovery-token-ca-cert-hash sha256:4bd8f69e17af5643c5a1513ba8c74dbaa4dad1b40d7c63926424f6e647109574
 ```
 
 ### Setup networking with Flannel
@@ -70,7 +70,7 @@ sudo sysctl net.bridge.bridge-nf-call-iptables=1
 ### Join other nodes
 
 ```
-kubeadm join 192.168.8.200:6443 --token fr4eq0.5xys4i4rft5p95jd --discovery-token-ca-cert-hash sha256:4bd8f69e17af5643c5a1513ba8c74dbaa4dad1b40d7c63926424f6e647109574
+sudo kubeadm join 192.168.8.200:6443 --token fr4eq0.5xys4i4rft5p95jd --discovery-token-ca-cert-hash sha256:4bd8f69e17af5643c5a1513ba8c74dbaa4dad1b40d7c63926424f6e647109574
 ```
 
 * [Customize the docker0 bridge](https://docs.docker.com/v17.09/engine/userguide/networking/default_network/custom-docker0/)
