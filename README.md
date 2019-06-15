@@ -50,7 +50,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 Your join token is valid for 24 hours, so save it into a text file. Here's an example of mine:
 
 ```
-kubeadm join 192.168.8.200:6443 --token 3v79m8.46maklc1c2cm482e --discovery-token-ca-cert-hash sha256:39b856500561822203814dcab3a7c6fcac08e3a1816454006212d9af03007f7b
+kubeadm join 192.168.8.200:6443 --token fr4eq0.5xys4i4rft5p95jd --discovery-token-ca-cert-hash sha256:4bd8f69e17af5643c5a1513ba8c74dbaa4dad1b40d7c63926424f6e647109574
 ```
 
 * [Customize the docker0 bridge](https://docs.docker.com/v17.09/engine/userguide/networking/default_network/custom-docker0/)
