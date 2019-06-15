@@ -55,16 +55,16 @@ kubeadm join 192.168.8.200:6443 --token fr4eq0.5xys4i4rft5p95jd --discovery-toke
 
 ### Setup networking with Flannel
 
-* [Flannel](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#tabs-pod-install-4)
+* [Flannel CNI](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#tabs-pod-install-4)
 
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
 On each node that joins including the master:
 
 ```
-$ sudo sysctl net.bridge.bridge-nf-call-iptables=1
+sudo sysctl net.bridge.bridge-nf-call-iptables=1
 ```
 
 * [Customize the docker0 bridge](https://docs.docker.com/v17.09/engine/userguide/networking/default_network/custom-docker0/)
