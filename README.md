@@ -26,7 +26,7 @@ Comment out swap partition
 sudo kubeadm config images pull -v3
 ```
 
-For flannel to work correctly, you must pass ```--pod-network-cidr=10.244.0.0/24``` to kubeadm init.
+* For flannel to work correctly, you must pass ```--pod-network-cidr=10.244.0.0/24``` to kubeadm init.
 
 ```
 sudo kubeadm init --token-ttl=0 --pod-network-cidr=10.244.0.0/24
