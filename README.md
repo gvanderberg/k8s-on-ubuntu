@@ -27,7 +27,7 @@ sudo kubeadm config images pull -v3
 ```
 
 * For flannel to work correctly, you must pass ```--pod-network-cidr=10.244.0.0/24``` to kubeadm init.
-* Set ```/proc/sys/net/bridge/bridge-nf-call-iptables``` to 1 by running ```sysctl net.bridge.bridge-nf-call-iptables=1``` to pass bridged IPv4 traffic to iptables’ chains. This is a requirement for some CNI plugins to work.
+* Set ```/proc/sys/net/bridge/bridge-nf-call-iptables``` to ```1``` by running ```sysctl net.bridge.bridge-nf-call-iptables=1``` to pass bridged IPv4 traffic to iptables’ chains. This is a requirement for some CNI plugins to work.
 
 ```
 sudo kubeadm init --token-ttl=0 --pod-network-cidr=10.244.0.0/24
