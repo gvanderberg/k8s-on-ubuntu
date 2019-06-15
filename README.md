@@ -67,7 +67,7 @@ On each node that joins including the master:
 sudo sysctl net.bridge.bridge-nf-call-iptables=1
 ```
 
-I to manually set the podCIDR for each node:
+I had to manually set the podCIDR for each node:
 * [Flannel Troubleshooting](https://github.com/coreos/flannel/blob/master/Documentation/troubleshooting.md)
 
 ```
