@@ -67,6 +67,12 @@ On each node that joins including the master:
 sudo sysctl net.bridge.bridge-nf-call-iptables=1
 ```
 
+### Join other nodes
+
+```
+kubeadm join 192.168.8.200:6443 --token fr4eq0.5xys4i4rft5p95jd --discovery-token-ca-cert-hash sha256:4bd8f69e17af5643c5a1513ba8c74dbaa4dad1b40d7c63926424f6e647109574
+```
+
 * [Customize the docker0 bridge](https://docs.docker.com/v17.09/engine/userguide/networking/default_network/custom-docker0/)
 * [Setting Up a Kubernetes Cluster on Ubuntu 18.04](https://mherman.org/blog/setting-up-a-kubernetes-cluster-on-ubuntu/)
 * [How to Install and Configure Kubernetes and Docker on Ubuntu 18.04 LTS](https://www.howtoforge.com/tutorial/how-to-install-kubernetes-on-ubuntu/)
