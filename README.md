@@ -40,9 +40,9 @@ We pass in `--token-ttl=0` so that the token never expires - do not use this set
 After the `init` is complete run the snippet given to you on the command-line:
 
 ```
-  mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 * Now save your join-token
