@@ -20,12 +20,7 @@ Comment out swap partition
 
 ### Initialize your master node
 
-* kubeadm - used to create new clusters or join an existing one
-* kubectl - the CLI administration tool for Kubernetes
- 
 * Pre-pull images
-
-`kubeadm` now has a command to pre-pull the requisites Docker images needed to run a Kubernetes master, type in:
 
 ```
 sudo kubeadm config images pull -v3
