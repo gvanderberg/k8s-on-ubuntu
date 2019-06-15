@@ -26,8 +26,6 @@ Comment out swap partition
 sudo kubeadm config images pull -v3
 ```
 
-* Initialize your master node with a Pod network CIDR:
-
 For flannel to work correctly, you must pass ```--pod-network-cidr=10.244.0.0/24``` to kubeadm init.
 
 ```
