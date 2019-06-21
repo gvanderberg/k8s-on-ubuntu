@@ -14,7 +14,7 @@ cat <<EOF >/etc/docker/daemon.json
 EOF
 systemctl restart docker
 systemctl enable docker
-usermod ${username} -aG docker
+usermod support -aG docker
 
 echo
 echo 2\) Disable Swap
@@ -27,7 +27,7 @@ echo 3\) Install dependencies, kubeadm kubelet kubectl
 echo
 
 apt-get install -y apt-transport-https
-curl -s --proxy ${proxy} https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+curl -s --proxy http://proxy.out.co.za:8080 https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
 
 apt-get update
