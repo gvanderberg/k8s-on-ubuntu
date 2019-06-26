@@ -3,7 +3,7 @@
 * [Single-Node Kubernetes on Raspberry Pi with MicroK8s and Ubuntu](https://blog.ubuntu.com/2019/02/27/single-node-kubernetes-on-raspberry-pi-microk8s-ubuntu)
 
 ```
-curl -sLSfk https://raw.githubusercontent.com/gvanderberg/k8s-on-ubuntu/master/scripts/prep.sh | sudo sh
+curl -sLSf https://raw.githubusercontent.com/gvanderberg/k8s-on-ubuntu/master/scripts/prep.sh | sudo sh
 ```
 
 Disable swap completely
