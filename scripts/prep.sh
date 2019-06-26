@@ -27,7 +27,7 @@ echo 3\) Install dependencies, kubeadm kubelet kubectl
 echo
 
 apt-get install -y apt-transport-https openssh-server
-curl -s --proxy http://proxy.out.co.za:8080 https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
 
 apt-get update
