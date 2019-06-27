@@ -23,7 +23,7 @@ echo
 swapoff -a
 
 echo
-echo 3\) Install dependencies, kubeadm kubelet kubectl
+echo 3\) Install dependencies
 echo
 
 apt-get install -y apt-transport-https openssh-server
