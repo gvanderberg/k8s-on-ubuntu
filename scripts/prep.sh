@@ -34,10 +34,10 @@ apt-get update
 apt-get install -y kubeadm #kubelet kubectl
 apt-mark hold kubeadm #kubelet kubectl
 
-# echo
-# echo 4\) Adding " cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory" to /boot/firmware/cmdline.txt
-# echo
+echo
+echo 4\) Adding " cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory" to /boot/firmware/cmdline.txt
+echo
 
-# sudo cp /boot/firmware/cmdline.txt /boot/firmware/cmdline_backup.txt
-# orig="$(head -n1 /boot/firmware/cmdline.txt) cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory"
-# echo $orig | sudo tee /boot/firmware/cmdline.txt
+sudo cp /boot/firmware/cmdline.txt /boot/firmware/cmdline_backup.txt
+orig="$(head -n1 /boot/firmware/cmdline.txt) cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory"
+echo $orig | tee /boot/firmware/cmdline.txt
