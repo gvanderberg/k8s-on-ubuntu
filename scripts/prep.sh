@@ -5,6 +5,7 @@ echo
 echo 1\) Install Docker
 echo
 
+# curl -sSL https://get.docker.com | bash
 apt-get install -y docker.io
 cat <<EOF >/etc/docker/daemon.json
 {
