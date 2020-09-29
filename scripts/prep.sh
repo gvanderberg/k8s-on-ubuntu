@@ -39,6 +39,6 @@ apt-mark hold kubeadm kubelet kubectl kubernetes-cni
 # echo 4\) Adding " cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory" to /boot/firmware/cmdline.txt
 # echo
 
-# sudo cp /boot/firmware/cmdline.txt /boot/firmware/cmdline_backup.txt
-# orig="$(head -n1 /boot/firmware/cmdline.txt) cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory"
-# echo $orig | tee /boot/firmware/cmdline.txt
+# sudo cp /boot/firmware/nobtcmd.txt /boot/firmware/nobtcmd_backup.txt
+# orig="$(head -n1 /boot/firmware/nobtcmd.txt) cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory"
+# echo $orig | tee /boot/firmware/nobtcmd.txt
